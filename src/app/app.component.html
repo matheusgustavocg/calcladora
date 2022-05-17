@@ -1,0 +1,102 @@
+<span class="span"></span>
+<div class="calculadora container pt-3 col-sm-12 offset-sm-2 col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-xl-2 offset-xl-5">
+  <h1 class=" text-center">Calculadora</h1>
+  <p class=" text-center">Realização do teste V12 Consulting</p>
+  <div class="row">
+    <div class="col-sm-4 offset-sm-4"></div>
+    <form action="" method="">
+      <div>
+        <label for="" class="form-label "></label>
+        <input type="text" [readOnly]="true" class="form-control" [value]="visor">
+      </div>
+    </form>
+  </div>
+  <table class="bt-3 pt-3 col-sm-12 mt-3 w-100">
+    <thead>
+    <tr>
+      <th>
+      </th>
+    </tr>
+
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('(')">(</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero(')')">)</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="resetaCalculadora()">AC</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('7')">7</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('8')">8</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('9')">9</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('/')">÷</button>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('4')">4</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('5')">5</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('6')">6</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('*')">x</button>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('1')">1</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('2')">2</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('3')">3</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('-')">-</button>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('0')">0</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('.')">.</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="resultado()">=</button>
+      </td>
+      <td>
+        <button class="btn btn-danger col-12" (click)="insereOperadorNumero('+')">+</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h4 class="text-center">Lista de operações feitas</h4>
+  <span class="text-center" *ngFor="let operacao of operacoesExecutadas">
+    <p class="">Operaçao: {{operacao}}</p>
+  </span>
+</div>
